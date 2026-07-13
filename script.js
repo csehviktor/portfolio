@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // theme switching
     const root = document.documentElement;
     const toggleBtn = document.getElementById("theme-btn");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
     toggleBtn?.addEventListener("click", () => {
         const isDark = root.getAttribute("data-theme") === "dark";
