@@ -9,12 +9,20 @@
         <meta property="og:title" content="csehviktor">
         <meta property="og:description" content="21-year-old Computer Science student from Hungary">
         <meta property="og:url" content="https://csehviktor.pages.dev/">
-        <link rel="canonical" href="https://csehviktor.pages.dev/">
+        <link href="https://csehviktor.pages.dev/" rel="canonical">
         <title>csehviktor</title>
-        <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
-        <link href="style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com" rel="preconnect">
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <script>
+            (function() {
+                const root = document.documentElement;
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+                // check local storage first, fall back to system preference
+                const savedTheme = localStorage.getItem("theme");
+                const initialTheme = savedTheme || (prefersDark.matches ? "dark" : "light");
+
+                root.setAttribute("data-theme", initialTheme);
+            })();
+        </script>
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -28,7 +36,10 @@
             "knowsAbout": ["Java", "Rust", "Go", "C", "TypeScript", "JavaScript", "React", "HTML", "CSS", "SQL", "Git", "Linux"]
         }
         </script>
-
+        <link href="style.css" rel="stylesheet">
+        <link href="public/favicon.svg" rel="icon" type="image/svg+xml">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
 
     <body class="wrap">

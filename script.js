@@ -1,5 +1,3 @@
-const THEME_KEY = "theme";
-
 const REPO = "csehviktor/portfolio"
 
 const STAGGER_MULTIPLIER = 150; // ms per element
@@ -25,28 +23,21 @@ async function sha() {
 }
 sha();
 
-const root = document.documentElement;
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-// check local storage first, fall back to system preference
-const savedTheme = localStorage.getItem(THEME_KEY);
-const initialTheme = savedTheme || (prefersDark.matches ? "dark" : "light");
-
-root.setAttribute("data-theme", initialTheme);
-
+// theme switching
 const toggleBtn = document.getElementById("theme-btn");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 toggleBtn?.addEventListener("click", () => {
     const isDark = root.getAttribute("data-theme") === "dark";
     const newTheme = isDark ? "light" : "dark";
 
     root.setAttribute("data-theme", newTheme);
-    localStorage.setItem(THEME_KEY, newTheme);
+    localStorage.setItem("theme", newTheme);
 });
 
 // listen for system changes
 prefersDark.addEventListener("change", (e) => {
-    if (!localStorage.getItem(THEME_KEY)) {
+    if (!localStorage.getItem("theme")) {
         const newSystemTheme = e.matches ? "dark" : "light";
         root.setAttribute("data-theme", newSystemTheme);
     }
@@ -69,9 +60,7 @@ const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             // apply staggered delay if part of a batch
-            if (delay > 0) {
-                entry.target.style.transitionDelay = `${delay * STAGGER_MULTIPLIER}ms`;
-            }
+            if (delay > 0) entry.target.style.transitionDelay = `${delay * STAGGER_MULTIPLIER}ms`;
             entry.target.classList.add("in");
 
             // cleanup
@@ -85,9 +74,7 @@ const io = new IntersectionObserver((entries, observer) => {
                 delay = 0;
             }, RESET_TIMEOUT);
 
-            if (revealed === revealEls.length) {
-                observer.disconnect();
-            }
+            if (revealed === revealEls.length) observer.disconnect();
         }
     });
 }, observerOptions);
