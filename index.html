@@ -10,18 +10,6 @@
         <meta property="og:description" content="21-year-old Computer Science student from Hungary">
         <meta property="og:url" content="https://csehviktor.pages.dev/">
         <link href="https://csehviktor.pages.dev/" rel="canonical">
-        <title>csehviktor</title>
-        <script>
-            (function() {
-                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-                // check local storage first, fall back to system preference
-                const savedTheme = localStorage.getItem("theme");
-                const initialTheme = savedTheme || (prefersDark.matches ? "dark" : "light");
-
-                document.documentElement.setAttribute("data-theme", initialTheme);
-            })();
-        </script>
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -35,6 +23,18 @@
             "knowsAbout": ["Java", "Rust", "Go", "C", "TypeScript", "JavaScript", "React", "HTML", "CSS", "SQL", "Git", "Linux"]
         }
         </script>
+        <title>csehviktor</title>
+        <script>
+            (function() {
+                const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+                // check local storage first, fall back to system preference
+                const savedTheme = localStorage.getItem("theme");
+                const initialTheme = savedTheme || (prefersDark.matches ? "dark" : "light");
+
+                document.documentElement.setAttribute("data-theme", initialTheme);
+            })();
+        </script>
+        <script src="script.js" defer></script>
         <link href="style.css" rel="stylesheet">
         <link href="public/favicon.svg" rel="icon" type="image/svg+xml">
         <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -170,6 +170,5 @@
             <p>last commit: <a id="sha" href="https://github.com/csehviktor/portfolio" target="_blank" class="link" rel="noopener noreferrer">-</a></p>
             <a class="to-top" href="#top">back to top ↑</a>
         </footer>
-        <script src="script.js"></script>
     </body>
 </html>
