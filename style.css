@@ -37,7 +37,6 @@ body {
     background: var(--paper);
     color: var(--ink);
     line-height: 1.55;
-    transition: background-color .25s ease, color .25s ease;
 }
 
 :focus-visible {
@@ -55,10 +54,7 @@ h1 {
     font-weight: 500;
     font-size: clamp(40px, 7vw, 64px);
     line-height: 1.05;
-    letter-spacing: -0.01em;
-    opacity: 0;
-    animation: rise 0.7s ease 0.08s forwards;
-}
+    }
 
 .wrap {
     max-width: 760px;
@@ -77,9 +73,11 @@ section {
 
 .link, .to-top {
     text-decoration: none;
-    color: var(--ink-soft);
     border-bottom: 1px solid var(--line);
-    transition: border-color .2s, color .2s;
+}
+
+.to-top {
+    color: var(--ink-soft);
 }
 
 .link {
@@ -92,14 +90,7 @@ section {
     color: var(--accent);
 }
 
-.tag, .contact {
-    opacity: 0;
-    animation: rise 0.6s ease forwards;
-}
-
 .contact {
-    animation-delay: 0.18s;
-    animation-duration: 0.7s;
     margin-top: 30px;
     gap: 18px;
     font-size: 13px;
@@ -119,24 +110,13 @@ section {
     margin-bottom: 22px;
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity .6s ease, transform .6s ease;
-}
-
-.reveal.in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .eyebrow, .skill-group-title {
     color: var(--ink-soft);
     font-size: 12px;
-    margin-bottom: 22px;
 }
 
 .eyebrow {
+    margin-bottom: 22px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
@@ -156,7 +136,6 @@ section {
     grid-template-columns: 120px 1fr;
     gap: 20px;
     padding: 18px 0;
-    border-bottom: 1px solid var(--line);
 }
 
 .entry:last-child {
@@ -198,11 +177,10 @@ section {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 24px -14px rgba(23,24,26,0.25);
     border-color: var(--accent);
 }
@@ -235,6 +213,7 @@ section {
 
 .card-top .link {
     font-size: 11px;
+    padding-bottom: 0px;
 }
 
 .stack {
@@ -315,12 +294,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color .2s ease, transform .2s ease;
 }
 
 .theme-toggle:hover {
     border-color: var(--accent);
-    transform: translateY(-1px);
 }
 
 .theme-toggle svg {
@@ -337,27 +314,16 @@ footer {
 .rust { --lang: #ce422b; }
 .go { --lang: #00add8; }
 .gradle { --lang: #02303a; }
-.react { --lang: #61dafb; }
 .javascript { --lang: #f0db4f; }
+.react { --lang: #61dafb; }
+.tailwind { --lang: #818cf8; }
 .postgresql { --lang: #2e7d32; }
 .templ { --lang: #a78bfa; }
 .css { --lang: #461994; }
-.react { --lang: #61dafb; }
-.tailwind { --lang: #818cf8; }
-
-@keyframes rise {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 @media (max-width:640px) {
     header { padding: 64px 0 44px; }
     .entry { grid-template-columns: 1fr; gap: 6px; }
     .cards { grid-template-columns: 1fr; }
     .theme-toggle { top: 16px; right: 16px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; }
-    h1, header, header p.role, .tag, .contact { opacity: 1; }
 }
