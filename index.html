@@ -13,14 +13,13 @@
         <title>csehviktor</title>
         <script>
             (function() {
-                const root = document.documentElement;
                 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
                 // check local storage first, fall back to system preference
                 const savedTheme = localStorage.getItem("theme");
                 const initialTheme = savedTheme || (prefersDark.matches ? "dark" : "light");
 
-                root.setAttribute("data-theme", initialTheme);
+                document.documentElement.setAttribute("data-theme", initialTheme);
             })();
         </script>
         <script type="application/ld+json">

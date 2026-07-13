@@ -24,6 +24,7 @@ async function sha() {
 sha();
 
 // theme switching
+const root = document.documentElement;
 const toggleBtn = document.getElementById("theme-btn");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
