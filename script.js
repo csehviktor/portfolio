@@ -1,8 +1,5 @@
 const REPO = "csehviktor/portfolio"
 
-const STAGGER_MULTIPLIER = 150; // ms per element
-const RESET_TIMEOUT = 100;
-
 async function sha() {
     const el = document.getElementById("sha");
     if (!el) return;
