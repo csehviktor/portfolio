@@ -1,1 +1,165 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="21-year-old Computer Science student from Hungary">
+        <meta property="og:image" content="https://csehviktor.pages.dev/public/preview.svg">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="csehviktor">
+        <meta property="og:description" content="21-year-old Computer Science student from Hungary">
+        <meta property="og:url" content="https://csehviktor.pages.dev/">
+        <link rel="canonical" href="https://csehviktor.pages.dev/">
+        <title>csehviktor</title>
+        <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Viktor Cseh",
+            "url": "https://csehviktor.pages.dev/",
+            "sameAs": [
+                "https://github.com/csehviktor",
+                "https://linkedin.com/in/csehviktor",
+            ],
+            "knowsAbout": ["Java", "Rust", "Go", "C", "TypeScript", "JavaScript", "React", "HTML", "CSS", "SQL", "Git", "Linux"]
+        }
+        </script>
+
+    </head>
+
+    <body class="wrap">
+        <button id="theme-btn" class="theme-toggle" aria-label="switch to dark/light theme">
+            <svg xmlns="http://www.w3.org/2000/svg" class="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+        </button>
+
+        <header id="top">
+            <span class="tag">available for work</span>
+            <h1>Viktor Cseh</h1>
+            <div class="contact">
+                <a href="mailto:csehviktor@proton.me" class="link">email</a>
+                <a href="https://github.com/csehviktor" target="_blank" class="link" rel="noopener noreferrer">github</a>
+                <a href="https://linkedin.com/in/csehviktor" target="_blank" class="link" rel="noopener noreferrer">linkedin</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about" class="reveal">
+                <h2 class="eyebrow">About</h2>
+                <p>
+                    I'm a 21-year-old Computer Science student with a focus on backend development, where I get to do what I enjoy the most: solving complex problems and building efficient systems.
+                    Outside of coursework, I like exploring new concepts through personal projects to continuously sharpen my skills.
+                </p>
+            </section>
+
+            <!--
+            <section id="experience" class="reveal"s>
+                <h2 class="eyebrow">Experience</h2>
+                <div class="entry">
+                    <p>null</p>
+                </div>
+            </section>
+            -->
+
+            <section id="education" class="reveal">
+                <h2 class="eyebrow">Education</h2>
+                <div class="entry">
+                    <time>2024 — 2027</time>
+                    <div>
+                        <h3>BSc Computer Science - <span class="org">Eötvös Loránd University</span></h3>
+                        <p>Coursework spanning algorithms, data structures, software design, and databases, along with foundational math courses like analysis and discrete mathematics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="reveal">
+                <h2 class="eyebrow">Projects</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="index">01</div>
+                        <h3>project-pi</h3>
+                        <p>Building (!) a full-stack relational algebra interpreter web application, featuring a REST API backend, recursive descent parsing and AST evaluation.</p>
+                        <div class="stack">
+                            <span class="stack-chip rust">Rust</span>
+                            <span class="stack-chip default">???</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="index">02</div>
+                        <h3>transport-tycoon</h3>
+                        <p>Co-developed an economic simulation game for a university course, using Agile/Scrum sprint methodologies and Git for version control.</p>
+                        <div class="stack">
+                            <span class="stack-chip java">Java</span>
+                            <span class="stack-chip gradle">Gradle</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="index">03</div>
+                        <h3>client-box</h3>
+                        <p>Built a secure document management platform, implementing multi-tenant data rooms, custom session management and 2FA.</p>
+                        <div class="stack">
+                            <span class="stack-chip go">Go</span>
+                            <span class="stack-chip javascript">JavaScript</span>
+                            <span class="stack-chip templ">Templ</span>
+                            <span class="stack-chip css">CSS</span>
+                            <span class="stack-chip postgresql">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-top">
+                            <div class="index">04</div>
+                            <a href="https://github.com/csehviktor/watch-together" target="_blank" class="link" rel="noopener noreferrer">source</a>
+                        </div>
+                        <h3>watch-together</h3>
+                        <p>Created a full-stack video synchronization platform, using a server-side WebSocket state manager to broadcast playback events within isolated rooms.</p>
+                        <div class="stack">
+                            <span class="stack-chip go">Go</span>
+                            <span class="stack-chip react">React</span>
+                            <span class="stack-chip tailwind">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="reveal">
+                <h2 class="eyebrow">Skills</h2>
+
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Languages</h3>
+                    <div class="chips">
+                        <span class="chip">Hungarian - Native</span>
+                        <span class="chip">English - C1</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Technologies</h3>
+                    <div class="chips">
+                        <span class="chip">Java</span>
+                        <span class="chip">Rust</span>
+                        <span class="chip">Go</span>
+                        <span class="chip">C</span>
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">React</span>
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">Linux</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>last commit: <a id="sha" href="https://github.com/csehviktor/portfolio" target="_blank" class="link" rel="noopener noreferrer">-</a></p>
+            <a class="to-top" href="#top">back to top ↑</a>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
