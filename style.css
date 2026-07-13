@@ -203,6 +203,7 @@ section {
 .card .index {
     color: var(--ink-soft);
     font-size: 11px;
+    padding-bottom: 2px;
 }
 
 .card-top {
@@ -213,7 +214,6 @@ section {
 
 .card-top .link {
     font-size: 11px;
-    padding-bottom: 0px;
 }
 
 .stack {
