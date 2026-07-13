@@ -318,8 +318,6 @@ footer {
 .react { --lang: #61dafb; }
 .tailwind { --lang: #818cf8; }
 .postgresql { --lang: #2e7d32; }
-.templ { --lang: #a78bfa; }
-.css { --lang: #461994; }
 
 @media (max-width:640px) {
     header { padding: 64px 0 44px; }
