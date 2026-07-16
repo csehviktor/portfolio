@@ -1,3 +1,51 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/fraunces-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/ibm-plex-mono-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/ibm-plex-mono-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-600.woff2') format('woff2');
+}
+
 :root {
     --paper: #edebe3;
     --paper-raised: #efede6;
@@ -8,8 +56,8 @@
     --accent-soft: #dde4ec;
     --radius: 3px;
     --font-sans: "Inter", sans-serif;
-    --font-mono: "IBM Plex Mono", monospace;
     --font-serif: "Fraunces", serif;
+    --font-mono: "IBM Plex Mono", monospace;
 }
 
 [data-theme="dark"] {
@@ -44,8 +92,7 @@ body {
     outline-offset: 3px;
 }
 
-.tag, .contact, .eyebrow, .entry time, .card .index,
-.stack-chip, .skill-group-title, .chips, footer, .to-top {
+.tag, .contact, .eyebrow, .card .index, .stack-chip, .skill-group-title, .chips, .to-top, .entry time, footer {
     font-family: var(--font-mono);
 }
 
@@ -54,7 +101,7 @@ h1 {
     font-weight: 500;
     font-size: clamp(40px, 7vw, 64px);
     line-height: 1.05;
-    }
+}
 
 .wrap {
     max-width: 760px;
