@@ -204,12 +204,6 @@ section {
     flex-direction: column;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px -14px rgba(23,24,26,0.25);
-    border-color: var(--accent);
-}
-
 .card h3 {
     font-size: 16px;
     font-weight: 500;
